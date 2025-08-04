@@ -1,0 +1,158 @@
+[
+  {
+    "code": "A00",
+    "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+  },
+  {
+    "code": "A01",
+    "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+  },
+  {
+    "code": "A02",
+    "subjects": ["Toán", "Vật Lí", "Sinh Học"]
+  },
+  {
+    "code": "A03",
+    "subjects": ["Toán", "Vật Lí", "Lịch Sử"]
+  },
+  {
+    "code": "A04",
+    "subjects": ["Toán", "Vật Lí", "Địa Lí"]
+  },
+  {
+    "code": "A05",
+    "subjects": ["Toán", "Hóa Học", "Lịch Sử"]
+  },
+  {
+    "code": "A06",
+    "subjects": ["Toán", "Hóa Học", "Địa Lí"]
+  },
+  {
+    "code": "A07",
+    "subjects": ["Toán", "Lịch Sử", "Địa Lí"]
+  },
+  {
+    "code": "A08",
+    "subjects": ["Toán", "Lịch Sử", "GDCD"]
+  },
+  {
+    "code": "A09",
+    "subjects": ["Toán", "Địa Lí", "GDCD"]
+  },
+  {
+    "code": "A10",
+    "subjects": ["Toán", "Vật Lí", "GDCD"]
+  },
+  {
+    "code": "A11",
+    "subjects": ["Toán", "Hóa Học", "GDCD"]
+  },
+  {
+    "code": "B00",
+    "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+  },
+  {
+    "code": "B01",
+    "subjects": ["Toán", "Sinh Học", "Lịch Sử"]
+  },
+  {
+    "code": "B02",
+    "subjects": ["Toán", "Sinh Học", "Địa Lí"]
+  },
+  {
+    "code": "B03",
+    "subjects": ["Toán", "Sinh Học", "Ngữ Văn"]
+  },
+  {
+    "code": "B04",
+    "subjects": ["Toán", "Sinh Học", "GDCD"]
+  },
+  {
+    "code": "B08",
+    "subjects": ["Toán", "Sinh Học", "Tiếng Anh"]
+  },
+  {
+    "code": "C00",
+    "subjects": ["Ngữ Văn", "Lịch Sử", "Địa Lí"]
+  },
+  {
+    "code": "C01",
+    "subjects": ["Ngữ Văn", "Toán", "Vật Lí"]
+  },
+  {
+    "code": "C02",
+    "subjects": ["Ngữ Văn", "Toán", "Hóa Học"]
+  },
+  {
+    "code": "C03",
+    "subjects": ["Ngữ Văn", "Toán", "Lịch Sử"]
+  },
+  {
+    "code": "C04",
+    "subjects": ["Ngữ Văn", "Toán", "Địa Lí"]
+  },
+  {
+    "code": "C14",
+    "subjects": ["Ngữ Văn", "Toán", "GDCD"]
+  },
+  {
+    "code": "D01",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Anh"]
+  },
+  {
+    "code": "D02",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Nga"]
+  },
+  {
+    "code": "D03",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Pháp"]
+  },
+  {
+    "code": "D04",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Trung"]
+  },
+  {
+    "code": "D05",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Đức"]
+  },
+  {
+    "code": "D06",
+    "subjects": ["Toán", "Ngữ Văn", "Tiếng Nhật"]
+  },
+  {
+    "code": "D07",
+    "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+  },
+  {
+    "code": "D08",
+    "subjects": ["Toán", "Sinh Học", "Tiếng Anh"]
+  },
+  {
+    "code": "D09",
+    "subjects": ["Toán", "Lịch Sử", "Tiếng Anh"]
+  },
+  {
+    "code": "D10",
+    "subjects": ["Toán", "Địa Lí", "Tiếng Anh"]
+  },
+  {
+    "code": "H00",
+    "subjects": ["Ngữ Văn", "Năng khiếu vẽ mỹ thuật"]
+  },
+  {
+    "code": "M00",
+    "subjects": ["Ngữ Văn", "Toán", "Đọc diễn cảm - Hát"]
+  },
+  {
+    "code": "N00",
+    "subjects": ["Ngữ Văn", "Năng khiếu âm nhạc"]
+  },
+  {
+    "code": "T00",
+    "subjects": ["Toán", "Sinh Học", "Năng khiếu TDTT"]
+  },
+  {
+    "code": "V00",
+    "subjects": ["Toán", "Vật Lí", "Vẽ"]
+  }
+]
