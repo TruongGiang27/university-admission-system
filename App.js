@@ -396,9 +396,6 @@ export default function App() {
             )
           }
 
-
-
-
           <Text style={styles.sectionTitle}>
             Điểm TB lớp 10 (3 môn tổ hợp):
           </Text>
