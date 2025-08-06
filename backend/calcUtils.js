@@ -1,4 +1,4 @@
-const bangQuyDoi = require("./quydoi.json");
+const bangQuyDoi = require("./quydoi(3,4,5).json");
 
 function quyDoiQuocTe(SAT, ACT, IB, A_Level) {
   for (let item of bangQuyDoi) {
