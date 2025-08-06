@@ -173,7 +173,6 @@ export default function App() {
             >
               <View style={styles.radioCircle}>
                 {form.ccta === "co" && <View style={styles.selectedDot} />}
-
               </View>
               <Text style={styles.radioLabel}>Có CCTA</Text>
             </TouchableOpacity>
