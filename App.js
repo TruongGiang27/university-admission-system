@@ -10,13 +10,28 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 
+import dsNganh from "./backend/nganh.json";
+import bangQuyDoiCCTA from "./backend/CCTA.json";
+import bangQuyDoiCCQT from "./backend/quydoi(3,4,5).json";
+
 export default function App() {
+  const dsCCTA = Object.keys(bangQuyDoiCCTA[0]).filter(
+    (key) => key !== "id" && key !== "quy_doi_100"
+  );
+
+  const dsCCQT = Object.keys(bangQuyDoiCCQT[0]).filter(
+    (key) => key !== "quy_doi_100"
+  );
+
+  console.log(dsCCTA);
+
   const [form, setForm] = useState({
     doiTuong: "",
     nganhXetTuyen: "",
     toHopXetTuyen: "",
     diemHocLuc: "",
     ccta: "",
+    loaiCCTA: "",
     diemCCTA: "",
     diemTN1: "",
     diemTN2: "",
@@ -38,31 +53,26 @@ export default function App() {
     uuTienDT: "",
   });
 
+  const [toHopTheoNganh, setToHopTheoNganh] = useState();
+  const [selectedToHop, setSelectedToHop] = useState();
   const [xemKetQua, setXemKetQua] = useState(false);
-
-  const dsNganh = [
-    "Công nghệ thông tin",
-    "Kinh tế",
-    "Y khoa",
-    "Kỹ thuật ô tô",
-    "Quản trị kinh doanh",
-    "Thiết kế đồ họa",
-  ];
-
-  const dsToHop = [
-    "A00 (Toán, Lý, Hóa)",
-    "A01 (Toán, Lý, Anh)",
-    "B00 (Toán, Hóa, Sinh)",
-    "C00 (Văn, Sử, Địa)",
-    "D01 (Toán, Văn, Anh)",
-    "D07 (Toán, Hóa, Anh)",
-  ];
 
   const dsKhuVuc = ["KV1", "KV2-NT", "KV2", "KV3"];
   const dsDoiTuong = ["Ưu tiên 1", "Ưu tiên 2", "Không ưu tiên"];
 
   const handleChange = (key, value) => {
     setForm({ ...form, [key]: value });
+
+    if (key === "nganhXetTuyen") {
+      setToHopTheoNganh(
+        dsNganh.find((item) => item.name === value).combinations
+      );
+      setSelectedToHop();
+    } else if (key === "toHopXetTuyen") {
+      let temp = value.split(", ");
+      console.log(temp);
+      setSelectedToHop(temp);
+    }
   };
 
   const renderInput = (label, key, keyboardType = "default") => (
@@ -141,7 +151,7 @@ export default function App() {
           >
             <Picker.Item label="-- Chọn ngành --" value="" />
             {dsNganh.map((item, index) => (
-              <Picker.Item key={index} label={item} value={item} />
+              <Picker.Item key={index} label={item.name} value={item.name} />
             ))}
           </Picker>
         </View>
@@ -155,9 +165,14 @@ export default function App() {
             onValueChange={(value) => handleChange("toHopXetTuyen", value)}
           >
             <Picker.Item label="-- Chọn tổ hợp --" value="" />
-            {dsToHop.map((item, index) => (
-              <Picker.Item key={index} label={item} value={item} />
-            ))}
+            {toHopTheoNganh &&
+              toHopTheoNganh.map((item, index) => (
+                <Picker.Item
+                  key={index}
+                  label={item.subjects.join(", ")}
+                  value={item.subjects.join(", ")}
+                />
+              ))}
           </Picker>
         </View>
       </View>
@@ -165,49 +180,57 @@ export default function App() {
       {form.doiTuong !== "" && (
         <>
           <Text style={styles.sectionText}>Điểm học lực</Text>
-          <Text style={styles.sectionTitle}>Chứng chỉ tiếng Anh</Text>
-          <View style={styles.radioGroup}>
-            <TouchableOpacity
-              style={styles.radioOption}
-              onPress={() => handleChange("ccta", "co")}
-            >
-              <View style={styles.radioCircle}>
-                {form.ccta === "co" && <View style={styles.selectedDot} />}
-              </View>
-              <Text style={styles.radioLabel}>Có CCTA</Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styles.radioOption}
-              onPress={() => handleChange("ccta", "khong")}
-            >
-              <View style={styles.radioCircle}>
-                {form.ccta === "khong" && <View style={styles.selectedDot} />}
-              </View>
-              <Text style={styles.radioLabel}>Không có CCTA</Text>
-            </TouchableOpacity>
-          </View>
-          {form.ccta === "co" && (
-            <View style={styles.ccqtRow}>
-              <View style={[styles.pickerContainer, styles.ccqtPicker]}>
-                <Picker
-                  selectedValue={form.ccta}
-                  onValueChange={(value) => handleChange("loaiCCTA", value)}
+          {selectedToHop && selectedToHop.includes("Tiếng Anh") &&
+            form.doiTuong !== "6" && form.doiTuong !== "7" && form.doiTuong !== "8" && (
+            <View>
+              <Text style={styles.sectionTitle}>Chứng chỉ tiếng Anh</Text>
+              <View style={styles.radioGroup}>
+                <TouchableOpacity
+                  style={styles.radioOption}
+                  onPress={() => handleChange("ccta", "co")}
                 >
-                  <Picker.Item label="Loại CCTA" value="" />
-                  <Picker.Item label="IELTS" value="IELTS" />
-                  <Picker.Item label="TOEFL" value="TOEFL" />
-                  <Picker.Item label="Cambridge" value="Cambridge" />
-                  <Picker.Item label="Duolingo" value="Duolingo" />
-                </Picker>
+                  <View style={styles.radioCircle}>
+                    {form.ccta === "co" && <View style={styles.selectedDot} />}
+                  </View>
+                  <Text style={styles.radioLabel}>Có CCTA</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.radioOption}
+                  onPress={() => handleChange("ccta", "khong")}
+                >
+                  <View style={styles.radioCircle}>
+                    {form.ccta === "khong" && (
+                      <View style={styles.selectedDot} />
+                    )}
+                  </View>
+                  <Text style={styles.radioLabel}>Không có CCTA</Text>
+                </TouchableOpacity>
               </View>
-              <TextInput
-                style={[styles.input, styles.ccqtInput]}
-                keyboardType="numeric"
-                placeholder="Điểm CCTA tương ứng"
-                value={form.diemCCTA}
-                onChangeText={(value) => handleChange("diemCCTA", value)}
-              />
+
+              {selectedToHop.includes("Tiếng Anh") && form.ccta === "co" && (
+                <View style={styles.ccqtRow}>
+                  <View style={[styles.pickerContainer, styles.ccqtPicker]}>
+                    <Picker
+                      selectedValue={form.loaiCCTA}
+                      onValueChange={(value) => handleChange("loaiCCTA", value)}
+                    >
+                      {dsCCTA &&
+                        dsCCTA.map((item, index) => (
+                          <Picker.Item key={index} label={item} value={item} />
+                        ))}
+                    </Picker>
+                  </View>
+                  <TextInput
+                    style={[styles.input, styles.ccqtInput]}
+                    keyboardType="numeric"
+                    placeholder="Điểm CCTA tương ứng"
+                    value={form.diemCCTA}
+                    onChangeText={(value) => handleChange("diemCCTA", value)}
+                  />
+                </View>
+              )}
             </View>
           )}
 
@@ -220,12 +243,10 @@ export default function App() {
                     selectedValue={form.loaiCCQT}
                     onValueChange={(value) => handleChange("loaiCCQT", value)}
                   >
-                    <Picker.Item label="Loại CCQT" value="" />
-                    <Picker.Item label="SAT" value="SAT" />
-                    <Picker.Item label="ACT" value="ACT" />
-                    <Picker.Item label="IELTS" value="IELTS" />
-                    <Picker.Item label="TOEFL" value="TOEFL" />
-                    <Picker.Item label="IB" value="IB" />
+                    {dsCCQT &&
+                      dsCCQT.map((item, index) => (
+                        <Picker.Item key={index} label={item} value={item} />
+                      ))}
                   </Picker>
                 </View>
                 <TextInput
@@ -239,10 +260,16 @@ export default function App() {
             </>
           ) : (
             <>
-              <Text style={styles.sectionTitle}>Điểm năng lực</Text>
+              {form.doiTuong !== "6" &&
+                form.doiTuong !== "7" &&
+                form.doiTuong !== "8" && (
+                  <Text style={styles.sectionTitle}>Điểm năng lực</Text>
+                )}
               {form.doiTuong === "1" &&
                 renderInput(
-                  "Điểm bài đánh giá năng lực", "diemHocLuc", "numeric"
+                  "Điểm bài đánh giá năng lực",
+                  "diemHocLuc",
+                  "numeric"
                 )}
 
               {form.doiTuong === "2" && (
@@ -256,7 +283,7 @@ export default function App() {
               {form.doiTuong === "3" && (
                 <View style={styles.placeholderBox}>
                   <Text style={styles.placeholderText}>
-                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
+                    Hệ thống sẽ tự tính dựa trên Điểm THPT
                   </Text>
                 </View>
               )}
@@ -267,41 +294,18 @@ export default function App() {
                   {renderInput("Điểm bài luận", "diemBaiLuan", "numeric")}
                 </>
               )}
-
-              {form.doiTuong === "6" && (
-                <View style={styles.placeholderBox}>
-                  <Text style={styles.placeholderText}>
-                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
-                  </Text>
-                </View>
-              )}
-
-
-              {form.doiTuong === "7" && (
-                <View style={styles.placeholderBox}>
-                  <Text style={styles.placeholderText}>
-                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
-                  </Text>
-                </View>
-              )}
-
-              {form.doiTuong === "8" && (
-                <View style={styles.placeholderBox}>
-                  <Text style={styles.placeholderText}>
-                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
-                  </Text>
-                </View>
-              )}
             </>
           )}
 
-          <Text style={styles.sectionTitle}>Điểm TNTHPT (3 môn tổ hợp):</Text>
-          {form.doiTuong !== "1" &&
-            form.doiTuong !== "2" &&
-            form.doiTuong !== "4" &&
-              form.doiTuong !== "6" &&
-              
-            (
+          {form.doiTuong !== "8" ? (
+            <Text style={styles.sectionTitle}>Điểm TNTHPT (3 môn tổ hợp):</Text>
+          ) : (
+            <Text style={styles.sectionTitle}>
+              Điểm Chứng chỉ tuyển sinh quốc tế:
+            </Text>
+          )}
+          {!["7", "8"].includes(form.doiTuong) ? (
+            !["1", "2", "4", "6"].includes(form.doiTuong) && (
               <>
                 <Text style={styles.sectionTitle}>Chứng chỉ quốc tế</Text>
                 <View style={styles.radioGroup}>
@@ -341,12 +345,14 @@ export default function App() {
                           handleChange("loaiCCQT", value)
                         }
                       >
-                        <Picker.Item label="Loại CCQT" value="" />
-                        <Picker.Item label="SAT" value="SAT" />
-                        <Picker.Item label="ACT" value="ACT" />
-                        <Picker.Item label="IELTS" value="IELTS" />
-                        <Picker.Item label="TOEFL" value="TOEFL" />
-                        <Picker.Item label="IB" value="IB" />
+                        {dsCCQT &&
+                          dsCCQT.map((item, index) => (
+                            <Picker.Item
+                              key={index}
+                              label={item}
+                              value={item}
+                            />
+                          ))}
                       </Picker>
                     </View>
                     <TextInput
@@ -370,68 +376,195 @@ export default function App() {
                   </View>
                 )}
               </>
-            )}
-
-          {form.doiTuong !== "3" && form.doiTuong !== "7" && (
-            <>
-  
-              {!(form.doiTuong === "5" && form.ccqt === "co") && (
-                <>
-                  {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
-                  {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
-
-         
-                  {(form.doiTuong === "5" || form.doiTuong === "6") && form.ccta === "co" ? (
-                    <View style={styles.inputGroup}>
-                      <View style={styles.placeholderBox}>
-                        <Text style={styles.placeholderText}>
-                          {form.diemCCTA
-                            ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
-                            : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
-                        </Text>
-                      </View>
-                    </View>
-                  ) : (
-                    renderInput("Điểm TN môn 3", "diemTN3", "numeric")
-                  )}
-                </>
-              )}
-            </>
+            )
+          ) : (
+            <View style={styles.ccqtRow}>
+              <View style={[styles.pickerContainer, styles.ccqtPicker]}>
+                <Picker
+                  selectedValue={form.loaiCCQT}
+                  onValueChange={(value) => handleChange("loaiCCQT", value)}
+                >
+                  {dsCCQT &&
+                    dsCCQT.map((item, index) => (
+                      <Picker.Item key={index} label={item} value={item} />
+                    ))}
+                </Picker>
+              </View>
+              <TextInput
+                style={[styles.input, styles.ccqtInput]}
+                keyboardType="numeric"
+                placeholder="Điểm CCQT tương ứng"
+                value={form.diemCCQT}
+                onChangeText={(value) => handleChange("diemCCQT", value)}
+              />
+            </View>
           )}
 
+          {form.doiTuong !== "3" &&
+            form.doiTuong !== "7" &&
+            form.doiTuong !== "8" && (
+              <>
+                {!(form.doiTuong === "5" && form.ccqt === "co") && (
+                  <>
+                    {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
+                    {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
 
-          <Text style={styles.sectionTitle}>
-            Điểm TB lớp 10 (3 môn tổ hợp):
-          </Text>
-          {renderInput("TB10 môn 1", "tb10_1", "numeric")}
-          {renderInput("TB10 môn 2", "tb10_2", "numeric")}
-          {renderInput("TB10 môn 3", "tb10_3", "numeric")}
+                    {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                      <>
+                        {form.doiTuong === "1" ||
+                        form.doiTuong === "2" ||
+                        form.doiTuong === "3" ||
+                        form.doiTuong === "4" ||
+                        form.doiTuong === "5" ? (
+                          <>
+                            {form.ccta === "co" ? (
+                              <View style={styles.inputGroup}>
+                                <View style={styles.placeholderBox}>
+                                  <Text style={styles.placeholderText}>
+                                    {form.diemCCTA
+                                      ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                                      : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                                  </Text>
+                                </View>
+                              </View>
+                            ) : (
+                              renderInput("Điểm TN môn 3", "diemTN3", "numeric")
+                            )}
+                          </>
+                        ) : (
+                          <View style={styles.inputGroup}>
+                            <View style={styles.placeholderBox}>
+                              <Text style={styles.placeholderText}>
+                                Điểm tiếng Anh trong phương thức này được mặc
+                                định 10 điểm
+                              </Text>
+                            </View>
+                          </View>
+                        )}
+                      </>
+                    ) : (
+                      <>{renderInput("Điểm TN môn 3", "diemTN3", "numeric")}</>
+                    )}
+                  </>
+                )}
+              </>
+            )}
 
-          <Text style={styles.sectionTitle}>   
-            Điểm TB lớp 11 (3 môn tổ hợp):
-          </Text>
-          {renderInput("TB11 môn 1", "tb11_1", "numeric")}
-          {renderInput("TB11 môn 2", "tb11_2", "numeric")}
-          {renderInput("TB11 môn 3", "tb11_3", "numeric")}
+          {form.doiTuong !== "1" &&
+          form.doiTuong !== "2" &&
+          form.doiTuong !== "3" &&
+          form.doiTuong !== "4" &&
+          form.doiTuong !== "5" ? (
+            <>
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 10 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB10 môn 1", "tb10_1", "numeric")}
+              {renderInput("TB10 môn 2", "tb10_2", "numeric")}
+              {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      Điểm tiếng Anh trong phương thức này được mặc định 10 điểm
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+              )}
 
-          <Text style={styles.sectionTitle}>
-            Điểm TB lớp 12 (3 môn tổ hợp):
-          </Text>
-          {renderInput("TB12 môn 1", "tb12_1", "numeric")}
-          {renderInput("TB12 môn 2", "tb12_2", "numeric")}
-          {((form.doiTuong === "5" || form.doiTuong === "6" || form.doiTuong === "7" || form.doiTuong === "8") && form.ccta === "co") ? (
-            <View style={styles.inputGroup}>
-              <View style={styles.placeholderBox}>
-                <Text style={styles.placeholderText}>
-                  {form.diemCCTA
-                    ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
-                    : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
-                </Text>
-              </View>
-            </View>
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 11 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB11 môn 1", "tb11_1", "numeric")}
+              {renderInput("TB11 môn 2", "tb11_2", "numeric")}
+              {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      Điểm tiếng Anh trong phương thức này được mặc định 10 điểm
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+              )}
+
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 12 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB12 môn 1", "tb12_1", "numeric")}
+              {renderInput("TB12 môn 2", "tb12_2", "numeric")}
+              {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      Điểm tiếng Anh trong phương thức này được mặc định 10 điểm
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+              )}
+            </>
           ) : (
             <>
-              {renderInput("TB12 môn 3", "tb12_3", "numeric")}
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 10 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB10 môn 1", "tb10_1", "numeric")}
+              {renderInput("TB10 môn 2", "tb10_2", "numeric")}
+              {form.ccta === "co" ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      {form.diemCCTA
+                        ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                        : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+              )}
+
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 11 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB11 môn 1", "tb11_1", "numeric")}
+              {renderInput("TB11 môn 2", "tb11_2", "numeric")}
+              {form.ccta === "co" ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      {form.diemCCTA
+                        ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                        : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB11 môn 3", "tb11_3", "numeric")}</>
+              )}
+
+              <Text style={styles.sectionTitle}>
+                Điểm TB lớp 12 (3 môn tổ hợp):
+              </Text>
+              {renderInput("TB12 môn 1", "tb12_1", "numeric")}
+              {renderInput("TB12 môn 2", "tb12_2", "numeric")}
+              {form.ccta === "co" ? (
+                <View style={styles.inputGroup}>
+                  <View style={styles.placeholderBox}>
+                    <Text style={styles.placeholderText}>
+                      {form.diemCCTA
+                        ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                        : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                    </Text>
+                  </View>
+                </View>
+              ) : (
+                <>{renderInput("TB12 môn 3", "tb12_3", "numeric")}</>
+              )}
             </>
           )}
 
