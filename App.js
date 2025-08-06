@@ -299,6 +299,8 @@ export default function App() {
           {form.doiTuong !== "1" &&
             form.doiTuong !== "2" &&
             form.doiTuong !== "4" &&
+              form.doiTuong !== "6" &&
+              
             (
               <>
                 <Text style={styles.sectionTitle}>Chứng chỉ quốc tế</Text>
@@ -370,30 +372,33 @@ export default function App() {
               </>
             )}
 
-          {form.doiTuong !== "3" &&
-            form.doiTuong !== "7" && (
-              <>
-                {!(form.doiTuong === "5" && form.ccqt === "co") && (
-                  <>
-                    {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
-                    {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
-                    {renderInput("Điểm TN môn 3", "diemTN3", "numeric")}
-                  </>
-                )}
-                {((form.doiTuong === "5" || form.doiTuong === "6") && form.ccta === "co") && (
-                  <View style={styles.inputGroup}>
-                    <View style={styles.placeholderBox}>
-                      <Text style={styles.placeholderText}>
-                        {form.diemCCTA
-                          ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
-                          : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
-                      </Text>
+          {form.doiTuong !== "3" && form.doiTuong !== "7" && (
+            <>
+  
+              {!(form.doiTuong === "5" && form.ccqt === "co") && (
+                <>
+                  {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
+                  {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
+
+         
+                  {(form.doiTuong === "5" || form.doiTuong === "6") && form.ccta === "co" ? (
+                    <View style={styles.inputGroup}>
+                      <View style={styles.placeholderBox}>
+                        <Text style={styles.placeholderText}>
+                          {form.diemCCTA
+                            ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                            : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                        </Text>
+                      </View>
                     </View>
-                  </View>
-                )}
-              </>
-            )
-          }
+                  ) : (
+                    renderInput("Điểm TN môn 3", "diemTN3", "numeric")
+                  )}
+                </>
+              )}
+            </>
+          )}
+
 
           <Text style={styles.sectionTitle}>
             Điểm TB lớp 10 (3 môn tổ hợp):
@@ -402,7 +407,32 @@ export default function App() {
           {renderInput("TB10 môn 2", "tb10_2", "numeric")}
           {renderInput("TB10 môn 3", "tb10_3", "numeric")}
 
-          <Text style={styles.sectionTitle}>
+          <Text style={styles.sectionTitle}>    {form.doiTuong !== "3" && form.doiTuong !== "7" && (
+            <>
+              {/* Trường hợp KHÔNG phải đối tượng 5 và KHÔNG có CCQT thì hiển thị các ô điểm */}
+              {!(form.doiTuong === "5" && form.ccqt === "co") && (
+                <>
+                  {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
+                  {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
+
+                  {/* Nếu có CCTA, thay Điểm TN môn 3 bằng text quy đổi */}
+                  {(form.doiTuong === "5" || form.doiTuong === "6") && form.ccta === "co" ? (
+                    <View style={styles.inputGroup}>
+                      <View style={styles.placeholderBox}>
+                        <Text style={styles.placeholderText}>
+                          {form.diemCCTA
+                            ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                            : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                        </Text>
+                      </View>
+                    </View>
+                  ) : (
+                    renderInput("Điểm TN môn 3", "diemTN3", "numeric")
+                  )}
+                </>
+              )}
+            </>
+          )}
             Điểm TB lớp 11 (3 môn tổ hợp):
           </Text>
           {renderInput("TB11 môn 1", "tb11_1", "numeric")}
