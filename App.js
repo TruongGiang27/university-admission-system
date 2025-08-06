@@ -17,6 +17,7 @@ export default function App() {
     toHopXetTuyen: "",
     diemHocLuc: "",
     ccta: "",
+    diemCCTA: "",
     diemTN1: "",
     diemTN2: "",
     diemTN3: "",
@@ -172,6 +173,7 @@ export default function App() {
             >
               <View style={styles.radioCircle}>
                 {form.ccta === "co" && <View style={styles.selectedDot} />}
+
               </View>
               <Text style={styles.radioLabel}>Có CCTA</Text>
             </TouchableOpacity>
@@ -190,8 +192,8 @@ export default function App() {
             <View style={styles.ccqtRow}>
               <View style={[styles.pickerContainer, styles.ccqtPicker]}>
                 <Picker
-                  selectedValue={form.loaiCCQT}
-                  onValueChange={(value) => handleChange("loaiCCQT", value)}
+                  selectedValue={form.ccta}
+                  onValueChange={(value) => handleChange("loaiCCTA", value)}
                 >
                   <Picker.Item label="Loại CCTA" value="" />
                   <Picker.Item label="IELTS" value="IELTS" />
@@ -204,8 +206,8 @@ export default function App() {
                 style={[styles.input, styles.ccqtInput]}
                 keyboardType="numeric"
                 placeholder="Điểm CCTA tương ứng"
-                value={form.diemCCQT}
-                onChangeText={(value) => handleChange("diemCCQT", value)}
+                value={form.diemCCTA}
+                onChangeText={(value) => handleChange("diemCCTA", value)}
               />
             </View>
           )}
@@ -241,9 +243,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Điểm năng lực</Text>
               {form.doiTuong === "1" &&
                 renderInput(
-                  "Điểm bài đánh giá năng lực",
-                  "diemHocLuc",
-                  "numeric"
+                  "Điểm bài đánh giá năng lực", "diemHocLuc", "numeric"
                 )}
 
               {form.doiTuong === "2" && (
@@ -261,13 +261,46 @@ export default function App() {
                   </Text>
                 </View>
               )}
+
+              {form.doiTuong === "5" && (
+                <>
+                  {renderInput("Điểm phỏng vấn", "diemPhongVan", "numeric")}
+                  {renderInput("Điểm bài luận", "diemBaiLuan", "numeric")}
+                </>
+              )}
+
+              {form.doiTuong === "6" && (
+                <View style={styles.placeholderBox}>
+                  <Text style={styles.placeholderText}>
+                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
+                  </Text>
+                </View>
+              )}
+
+
+              {form.doiTuong === "7" && (
+                <View style={styles.placeholderBox}>
+                  <Text style={styles.placeholderText}>
+                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
+                  </Text>
+                </View>
+              )}
+
+              {form.doiTuong === "8" && (
+                <View style={styles.placeholderBox}>
+                  <Text style={styles.placeholderText}>
+                    Hệ thống sẽ tự tính dựa trên Điểm TNTHPT
+                  </Text>
+                </View>
+              )}
             </>
           )}
 
           <Text style={styles.sectionTitle}>Điểm TNTHPT (3 môn tổ hợp):</Text>
           {form.doiTuong !== "1" &&
             form.doiTuong !== "2" &&
-            form.doiTuong !== "4" && (
+            form.doiTuong !== "4" &&
+            (
               <>
                 <Text style={styles.sectionTitle}>Chứng chỉ quốc tế</Text>
                 <View style={styles.radioGroup}>
@@ -338,13 +371,30 @@ export default function App() {
               </>
             )}
 
-          {form.doiTuong !== "3" && (
-            <>
-              {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
-              {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
-              {renderInput("Điểm TN môn 3", "diemTN3", "numeric")}
-            </>
-          )}
+          {form.doiTuong !== "3" &&
+            form.doiTuong !== "7" && (
+              <>
+                {!(form.doiTuong === "5" && form.ccqt === "co") && (
+                  <>
+                    {renderInput("Điểm TN môn 1", "diemTN1", "numeric")}
+                    {renderInput("Điểm TN môn 2", "diemTN2", "numeric")}
+                    {renderInput("Điểm TN môn 3", "diemTN3", "numeric")}
+                  </>
+                )}
+                {((form.doiTuong === "5" || form.doiTuong === "6") && form.ccta === "co") && (
+                  <View style={styles.inputGroup}>
+                    <View style={styles.placeholderBox}>
+                      <Text style={styles.placeholderText}>
+                        {form.diemCCTA
+                          ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                          : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+              </>
+            )
+          }
 
           <Text style={styles.sectionTitle}>
             Điểm TB lớp 10 (3 môn tổ hợp):
@@ -365,7 +415,21 @@ export default function App() {
           </Text>
           {renderInput("TB12 môn 1", "tb12_1", "numeric")}
           {renderInput("TB12 môn 2", "tb12_2", "numeric")}
-          {renderInput("TB12 môn 3", "tb12_3", "numeric")}
+          {((form.doiTuong === "5" || form.doiTuong === "6" || form.doiTuong === "7" || form.doiTuong === "8") && form.ccta === "co") ? (
+            <View style={styles.inputGroup}>
+              <View style={styles.placeholderBox}>
+                <Text style={styles.placeholderText}>
+                  {form.diemCCTA
+                    ? `Điểm tiếng Anh lúc này Hệ thống quy đổi từ CCTA: ${form.diemCCTA}`
+                    : "Vui lòng nhập CCTA để hệ thống quy đổi Điểm tiếng Anh"}
+                </Text>
+              </View>
+            </View>
+          ) : (
+            <>
+              {renderInput("TB12 môn 3", "tb12_3", "numeric")}
+            </>
+          )}
 
           <Text style={styles.sectionText}>Điểm cộng:</Text>
           {renderInput("Điểm cộng thành tích", "diemCongThanhTich", "numeric")}
