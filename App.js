@@ -30,6 +30,7 @@ export default function App() {
     nganhXetTuyen: "",
     toHopXetTuyen: "",
     diemHocLuc: "",
+    diemToanDGNL: "",
     ccta: "",
     loaiCCTA: "",
     diemCCTA: "",
@@ -265,12 +266,21 @@ export default function App() {
                 form.doiTuong !== "8" && (
                   <Text style={styles.sectionTitle}>Điểm năng lực</Text>
                 )}
-              {form.doiTuong === "1" &&
-                renderInput(
+              {form.doiTuong === "1" && (
+                <>
+                  {renderInput(
                   "Điểm bài đánh giá năng lực",
                   "diemHocLuc",
                   "numeric"
-                )}
+                  )}
+                  {renderInput(
+                  "Điểm toán của bài đánh giá năng lực",
+                  "diemToanDGNL",
+                  "numeric"
+                  )}
+                </>
+              
+              )}
 
               {form.doiTuong === "2" && (
                 <View style={styles.placeholderBox}>
