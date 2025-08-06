@@ -487,7 +487,7 @@ export default function App() {
                   </View>
                 </View>
               ) : (
-                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+                <>{renderInput("TB10 môn 3", "tb11_3", "numeric")}</>
               )}
 
               <Text style={styles.sectionTitle}>
@@ -504,7 +504,7 @@ export default function App() {
                   </View>
                 </View>
               ) : (
-                <>{renderInput("TB10 môn 3", "tb10_3", "numeric")}</>
+                <>{renderInput("TB10 môn 3", "tb12_3", "numeric")}</>
               )}
             </>
           ) : (
