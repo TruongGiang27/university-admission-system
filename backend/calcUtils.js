@@ -14,8 +14,8 @@ function quyDoiQuocTe(SAT, ACT, IB, A_Level) {
   return 0;
 }
 
-function tinhDiemNangLuc(doiTuong, diemDGNL, diemTNTHPTquyDoi, diemHocTHPTquyDoi, SAT, ACT, IB, A_Level) {
-  // if (doiTuong === 1) return (diemDGNL  ) / 15; Thêm điểm toántoán
+function tinhDiemNangLuc(doiTuong, diemDGNL, diemToanDGNL, diemTNTHPTquyDoi, diemHocTHPTquyDoi, SAT, ACT, IB, A_Level) {
+  if (doiTuong === 1) return (diemDGNL + diemToanDGNL) / 15;
   if (doiTuong === 2) return diemTNTHPTquyDoi * 0.75;
   if (doiTuong === 3 || doiTuong === 4) return quyDoiQuocTe(SAT, ACT, IB, A_Level);
   return 0;
