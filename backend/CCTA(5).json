@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "ielts_academic": { "min": 7.5, "max": 9.0 },
+    "toefl_ibt": { "min": 110, "max": 120 },
+    "quy_doi_100": 100
+  },
+  {
+    "id": 2,
+    "ielts_academic": 7.0,
+    "toefl_ibt": { "min": 101, "max": 109 },
+    "quy_doi_100": 90
+  },
+  {
+    "id": 3,
+    "ielts_academic": 6.5,
+    "toefl_ibt": { "min": 93, "max": 100 },
+    "quy_doi_100": 80
+  },
+  {
+    "id": 4,
+    "ielts_academic": 6.0,
+    "toefl_ibt": { "min": 79, "max": 92 },
+    "quy_doi_100": 0
+  }
+]
