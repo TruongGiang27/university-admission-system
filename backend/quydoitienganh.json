@@ -1,0 +1,22 @@
+[
+  {
+    "IELTS": ">= 7.5",
+    "TOEFL_iBT": "110-120",
+    "diemQuyDoi": 100
+  },
+  {
+    "IELTS": "7.0",
+    "TOEFL_iBT": "101-109",
+    "diemQuyDoi": 90
+  },
+  {
+    "IELTS": "6.5",
+    "TOEFL_iBT": "93-100",
+    "diemQuyDoi": 80
+  },
+  {
+    "IELTS": "6.0",
+    "TOEFL_iBT": "79-92",
+    "diemQuyDoi": 0
+  }
+]
