@@ -1,0 +1,1186 @@
+[
+  {
+    "code": "106",
+    "name": "Khoa học Máy tính",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "107",
+    "name": "Kỹ thuật Máy tính",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "108",
+    "name": "Điện - Điện tử - Viễn Thông - Tự động hoá - Thiết kế vi mạch",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "109",
+    "name": "Kỹ Thuật Cơ khí",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "110",
+    "name": "Kỹ Thuật Cơ Điện tử",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "112",
+    "name": "Dệt - May",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "128",
+    "name": "Logistics và Hệ thống Công nghiệp",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "140",
+    "name": "Kỹ thuật Nhiệt",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "114",
+    "name": "Hoá - Thực phẩm - Sinh học",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Hóa Học", "Vật Lí"]
+      },
+      {
+        "code": "D07",
+        "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Công Nghệ"]
+      },
+      {
+        "code": "D08",
+        "subjects": ["Toán", "Sinh Học", "Tiếng Anh"]
+      }
+    ]
+  },
+  {
+    "code": "115",
+    "name": "Xây dựng và Quản lý Dự án Xây dựng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "117",
+    "name": "Kiến Trúc",
+    "combinations": [
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "148",
+    "name": "Kinh tế Xây dựng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "120",
+    "name": "Dầu khí - Địa chất",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "147",
+    "name": "Địa Kỹ thuật Xây dựng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "129",
+    "name": "Kỹ thuật Vật liệu",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "137",
+    "name": "Vật lý Kỹ thuật",
+    "combinations": [
+      {
+        "code": "A02",
+        "subjects": ["Toán", "Vật Lí", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "138",
+    "name": "Cơ Kỹ thuật",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "146",
+    "name": "Khoa học Dữ liệu",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "142",
+    "name": "Kỹ thuật Ô tô",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "145",
+    "name": "(Song ngành) Tàu thủy - Hàng không",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "123",
+    "name": "Quản lý Công nghiệp",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "153",
+    "name": "Quản trị Kinh doanh (Ngành mới)",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "125",
+    "name": "Tài nguyên và Môi trường",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "141",
+    "name": "Bảo dưỡng Công nghiệp",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "208",
+    "name": "Kỹ thuật Điện - Điện tử",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "258",
+    "name": "Thiết kế Vi mạch (Ngành mới)",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "257",
+    "name": "Năng lượng Tái tạo (Ngành mới)",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "211",
+    "name": "Kỹ thuật Robot",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "214",
+    "name": "Kỹ thuật Hóa học",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Hóa Học", "Vật Lí"]
+      },
+      {
+        "code": "D07",
+        "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "218",
+    "name": "Công nghệ Sinh học",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Sinh Học", "Hóa Học"]
+      },
+      {
+        "code": "A02",
+        "subjects": ["Toán", "Sinh Học", "Vật Lí"]
+      },
+      {
+        "code": "B08",
+        "subjects": ["Toán", "Sinh Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Sinh Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Sinh Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "254",
+    "name": "Công nghệ Sinh học số (Ngành mới)",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Sinh Học", "Hóa Học"]
+      },
+      {
+        "code": "A02",
+        "subjects": ["Toán", "Sinh Học", "Vật Lí"]
+      },
+      {
+        "code": "B08",
+        "subjects": ["Toán", "Sinh Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Sinh Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Sinh Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "219",
+    "name": "Công nghệ Thực phẩm",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Hóa Học", "Vật Lí"]
+      },
+      {
+        "code": "D07",
+        "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "215",
+    "name": "Quản lý Dự án Xây dựng và Kỹ thuật Xây dựng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "217",
+    "name": "Kiến trúc Cảnh quan",
+    "combinations": [
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "220",
+    "name": "Kỹ thuật Dầu khí",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "253",
+    "name": "Kinh doanh số (Ngành mới)",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "255",
+    "name": "Kinh tế Tuần hoàn (Ngành mới)",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "237",
+    "name": "Kỹ thuật Y sinh",
+    "combinations": [
+      {
+        "code": "A02",
+        "subjects": ["Toán", "Vật Lí", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "245",
+    "name": "Kỹ thuật Hàng không",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "266",
+    "name": "Khoa học Máy tính",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "306",
+    "name": "Khoa học Máy tính | Úc, New Zealand, Mỹ",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "307",
+    "name": "Kỹ thuật Máy tính | Úc, New Zealand",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "308",
+    "name": "Kỹ thuật Điện - Điện tử | Úc, Hàn Quốc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "309",
+    "name": "Kỹ thuật Cơ khí | Mỹ, Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "310",
+    "name": "Kỹ thuật Cơ Điện tử | Mỹ, Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "314",
+    "name": "Kỹ thuật Hóa học | Úc",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Hóa Học", "Vật Lí"]
+      },
+      {
+        "code": "D07",
+        "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "315",
+    "name": "Kỹ thuật Xây dựng | Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "319",
+    "name": "Công nghệ Thực phẩm | New Zealand",
+    "combinations": [
+      {
+        "code": "B00",
+        "subjects": ["Toán", "Hóa Học", "Sinh Học"]
+      },
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Hóa Học", "Vật Lí"]
+      },
+      {
+        "code": "D07",
+        "subjects": ["Toán", "Hóa Học", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Hóa Học", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "323",
+    "name": "Quản lý Công nghiệp | Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "325",
+    "name": "Kỹ thuật Môi trường, Quản lý Tài nguyên & Môi trường | Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "342",
+    "name": "Kỹ thuật Ô tô | Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "345",
+    "name": "Kỹ thuật Hàng không | Úc",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "406",
+    "name": "Trí tuệ Nhân tạo | ĐH Công nghệ Sydney (Úc) cấp bằng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  },
+  {
+    "code": "416",
+    "name": "Công nghệ Thông tin | ĐH Công nghệ Sydney (Úc) cấp bằng",
+    "combinations": [
+      {
+        "code": "A00",
+        "subjects": ["Toán", "Vật Lí", "Hóa Học"]
+      },
+      {
+        "code": "A01",
+        "subjects": ["Toán", "Vật Lí", "Tiếng Anh"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Tin Học"]
+      },
+      {
+        "code": null,
+        "subjects": ["Toán", "Vật Lí", "Công Nghệ"]
+      }
+    ]
+  }
+]
