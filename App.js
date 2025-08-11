@@ -202,10 +202,8 @@ export default function App() {
           <Text style={styles.sectionText}>Điểm học lực</Text>
 
           {selectedToHop &&
-            selectedToHop.includes("Tiếng Anh") &&
-            form.doiTuong !== "6" &&
-            form.doiTuong !== "7" &&
-            form.doiTuong !== "8" && (
+            (selectedToHop.includes("Tiếng Anh") ||
+              ["5", "6", "7", "8"].includes(form.doiTuong)) && (
               <View>
                 <Text style={styles.sectionTitle}>Chứng chỉ tiếng Anh</Text>
                 <View style={styles.radioGroup}>
@@ -471,6 +469,11 @@ export default function App() {
                               renderInput("Điểm TN môn 4", "diemTN4", "numeric")
                             )}
                           </>
+                        ) : ["6", "7", "8"].includes(form.doiTuong) &&
+                          form.ccta === "khong" ? (
+                          <>
+                            {renderInput("Điểm TN môn 4", "diemTN4", "numeric")}
+                          </>
                         ) : (
                           <View style={styles.inputGroup}>
                             <View style={styles.placeholderBox}>
@@ -483,7 +486,21 @@ export default function App() {
                         )}
                       </>
                     ) : (
-                      <>{renderInput("Điểm TN môn 4", "diemTN4", "numeric")}</>
+                      <>
+                        {["6", "7", "8"].includes(form.doiTuong) &&
+                        form.ccta === "co" ? (
+                          <View style={styles.inputGroup}>
+                            <View style={styles.placeholderBox}>
+                              <Text style={styles.placeholderText}>
+                                Điểm tiếng Anh trong phương thức này được mặc
+                                định 10 điểm
+                              </Text>
+                            </View>
+                          </View>
+                        ) : (
+                          renderInput("Điểm TN môn 4", "diemTN4", "numeric")
+                        )}
+                      </>
                     )}
                   </>
                 )}
@@ -504,6 +521,21 @@ export default function App() {
               {renderInput("TB10 môn 5", "tb10_5", "numeric")}
 
               {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "khong" ? (
+                  <>{renderInput("TB10 môn 6", "tb10_6", "numeric")}</>
+                ) : (
+                  <View style={styles.inputGroup}>
+                    <View style={styles.placeholderBox}>
+                      <Text style={styles.placeholderText}>
+                        Điểm tiếng Anh trong phương thức này được mặc định 10
+                        điểm
+                      </Text>
+                    </View>
+                  </View>
+                )
+              ) : ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "co" ? (
                 <View style={styles.inputGroup}>
                   <View style={styles.placeholderBox}>
                     <Text style={styles.placeholderText}>
@@ -521,7 +553,23 @@ export default function App() {
               {renderInput("TB11 môn 3", "tb11_3", "numeric")}
               {renderInput("TB11 môn 4", "tb11_4", "numeric")}
               {renderInput("TB11 môn 5", "tb11_5", "numeric")}
+
               {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "khong" ? (
+                  <>{renderInput("TB11 môn 6", "tb11_6", "numeric")}</>
+                ) : (
+                  <View style={styles.inputGroup}>
+                    <View style={styles.placeholderBox}>
+                      <Text style={styles.placeholderText}>
+                        Điểm tiếng Anh trong phương thức này được mặc định 10
+                        điểm
+                      </Text>
+                    </View>
+                  </View>
+                )
+              ) : ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "co" ? (
                 <View style={styles.inputGroup}>
                   <View style={styles.placeholderBox}>
                     <Text style={styles.placeholderText}>
@@ -530,7 +578,7 @@ export default function App() {
                   </View>
                 </View>
               ) : (
-                <>{renderInput("TB10 môn 6", "tb11_6", "numeric")}</>
+                <>{renderInput("TB11 môn 6", "tb11_6", "numeric")}</>
               )}
 
               <Text style={styles.sectionTitle}>Điểm TB lớp 12:</Text>
@@ -539,7 +587,23 @@ export default function App() {
               {renderInput("TB12 môn 3", "tb12_3", "numeric")}
               {renderInput("TB12 môn 4", "tb12_4", "numeric")}
               {renderInput("TB12 môn 5", "tb12_5", "numeric")}
+
               {selectedToHop && selectedToHop.includes("Tiếng Anh") ? (
+                ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "khong" ? (
+                  <>{renderInput("TB12 môn 6", "tb12_6", "numeric")}</>
+                ) : (
+                  <View style={styles.inputGroup}>
+                    <View style={styles.placeholderBox}>
+                      <Text style={styles.placeholderText}>
+                        Điểm tiếng Anh trong phương thức này được mặc định 10
+                        điểm
+                      </Text>
+                    </View>
+                  </View>
+                )
+              ) : ["6", "7", "8"].includes(form.doiTuong) &&
+                form.ccta === "co" ? (
                 <View style={styles.inputGroup}>
                   <View style={styles.placeholderBox}>
                     <Text style={styles.placeholderText}>
@@ -548,7 +612,7 @@ export default function App() {
                   </View>
                 </View>
               ) : (
-                <>{renderInput("TB10 môn 6", "tb12_6", "numeric")}</>
+                <>{renderInput("TB12 môn 6", "tb12_6", "numeric")}</>
               )}
             </>
           ) : (
